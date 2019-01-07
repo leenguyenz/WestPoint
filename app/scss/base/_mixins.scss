@@ -1,0 +1,55 @@
+@mixin center-block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin notify_count {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #eb2f64;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    color: $color-white;
+    text-align: center;
+    line-height: 15px;
+    font-size: 0.8rem;
+}
+
+// Responsive breakpoint grid
+
+/* 
+
+0 - 600px: Phone
+600px - 900px: Tablet portrait
+[900px - 1200px]: Tablet landscape
+[1200px - 1800px]: Normal style
+1800px + : Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == $phone {
+        @media only screen and (max-width: $phone) { @content }
+    }
+    @if $breakpoint == $tab-port {
+        @media only screen and (max-width: $tab-port) { @content }
+    }
+    @if $breakpoint == $tab-land {
+        @media only screen and (max-width: $tab-land) { @content }
+    }
+    @if $breakpoint == $big-desktop {
+        @media only screen and (min-width: $big-desktop) { @content }
+    }
+}

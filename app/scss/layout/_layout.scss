@@ -1,0 +1,36 @@
+.container{
+    max-width: 120rem;
+    margin: 5rem auto;
+    @include respond($tab-land){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.header{
+    background: $color-white;
+    border-bottom: 1px solid $color-grey-light-2;
+    height: 7rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include respond($phone){
+        height: 11rem;
+        align-content: center;
+    }
+}
+.content{
+    display: flex;
+    @include respond($tab-port){
+        flex-direction: column;
+    }
+}
+.sidebar{
+    background:$color-grey-dark-1;
+    flex: 0 0 18%;
+}
+.hotels{
+    flex:1;
+    background: $color-grey-light-1;
+}

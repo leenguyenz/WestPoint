@@ -1,0 +1,130 @@
+///////////////////////////////////
+//logo brand
+.logo-brand{
+    height: 3.5rem;
+    padding-left: 3rem;
+    img{
+        height: 100%;
+    }
+}
+///////////////////////////////////
+//search input
+.search{
+    position: relative;
+    flex: 0 0 40%;
+    @include respond($phone){
+        order: 1;
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
+    }
+    button{
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        border: none;
+        transform: translateY(-50%);
+        background: $color-grey-light-2;
+        i{
+            font-size: 1.6rem;
+            color: $color-grey-dark-2;
+        }
+    }
+}
+///////////////////////////////////
+//notification push
+.user{
+    & > *{
+        padding: 2.5rem 1.5rem;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            background: $color-grey-light-4;
+        }
+    }
+    &__bookmark:after{
+        @include notify_count;
+        content: '7';
+    }
+    &__chat:after{
+        @include notify_count;
+        content: '10';
+    }
+    &__avatar{
+        &-name{
+            position: relative;
+            padding-left: 4.5rem;
+            img{
+                max-width:3.5rem;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: -7px;
+            }
+        }
+    }
+    & > i {
+        font-size: 2.2rem;
+    }
+}
+
+///////////////////////////////////
+//btn book
+.btn__booking{
+    color: $color-primary;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $color-primary;
+    transform: scale(1);
+    display: inline-block;
+    &:hover{
+        color: $color-grey-dark-1;
+        span{margin-left: 1rem;}
+    }
+
+    &:focus{
+        outline: none;
+        animation: pulse 700ms infinite;
+    }
+    a{
+        color: $color-primary;
+    }
+
+    & span{
+        margin-left: 0.5rem;
+        transition: margin-left 300ms ease;
+    }
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+        box-shadow: none;
+    }
+    50%{
+        transform: scale(1.05);
+        box-shadow: 0px 2px 8px 5px $color-grey-light-2;
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
+
+//form control
+.form-control{
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    padding: .5rem 1rem;
+    border: none;
+    background: $color-grey-light-2;
+    border-radius: 999px;
+    transition:300ms ease;
+    &:focus{
+        outline: none;
+        width: 550px;
+    }
+    &::placeholder{
+        color: $color-grey-light-4;
+    }
+}
