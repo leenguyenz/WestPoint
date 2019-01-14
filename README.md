@@ -1,4 +1,4 @@
-## Happy booking | Flexbox webpage demo
+## WestPoint | Using Grid Template demo
 
 ### Note
 

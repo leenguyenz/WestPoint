@@ -1,4 +1,4 @@
-* {
+*{
 	margin: 0;
 	padding:0;
 }
@@ -12,21 +12,14 @@
 html{
 	box-sizing: border-box;
 	font-size: 62.5%;
-	@include respond($tab-land){
-		font-size: 50%;
-	}
 }
 body{
-	outline: none;
 	font-family:$font-body;
 	font-weight: 400;
 	color: $color-main;
 	font-size: $font-size-main;
 	line-height: $line-height-main;
 	text-decoration: none;
-	background-image: linear-gradient(to right bottom,$color-primary-light, $color-primary-dark);
-	background-size: cover;
-	background-repeat: no-repeat;
 	min-height: 100vh;
 }
 h1,h2,h3,h4,h5,h6{
@@ -38,7 +31,6 @@ a:link{
 	outline: none;
 	text-transform: capitalize;
 }
-a:hover{
-	text-decoration: none;
+a:active{
+	color: $color-main;
 }
-a:active{color: $color-main;}

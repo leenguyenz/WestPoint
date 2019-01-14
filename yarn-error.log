@@ -15,9 +15,9 @@ Platform:
 
 npm manifest: 
   {
-    "name": "Happybooking",
+    "name": "WestPoint",
     "version": "1.0.0",
-    "description": "Happy booking",
+    "description": "West Point",
     "main": "gulpfile.js",
     "author": "leenguyenz",
     "license": "MIT",

@@ -1,36 +1,26 @@
-.container{
-    max-width: 120rem;
-    margin: 5rem auto;
-    @include respond($tab-land){
-        margin: 0;
-        max-width: 100%;
-        width: 100%;
-    }
+#homepage{
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 }
-.header{
-    background: $color-white;
-    border-bottom: 1px solid $color-grey-light-2;
-    height: 7rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    @include respond($phone){
-        height: 11rem;
-        align-content: center;
-    }
+.banner{
+    background: $color-main;
 }
-.content{
-    display: flex;
-    @include respond($tab-port){
-        flex-direction: column;
-    }
+.realtors{
+    background: $color-secondary;
 }
-.sidebar{
-    background:$color-grey-dark-1;
-    flex: 0 0 18%;
+.benefits{
+    background: $color-grey-dark-2;
 }
-.hotels{
-    flex:1;
-    background: $color-grey-light-1;
+.intro{
+    background: $color-grey-light-2;
+}
+.decision{
+    background: $color-primary-dark;
+}
+.apartment{
+    background: $color-grey-dark-1;
+}
+.gallery{
+    background: $color-secondary;
 }

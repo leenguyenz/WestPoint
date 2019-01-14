@@ -1,24 +1,3 @@
-@mixin center-block{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-@mixin notify_count {
-    width: 1.5rem;
-    height: 1.5rem;
-    background: #eb2f64;
-    border-radius: 50%;
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    color: $color-white;
-    text-align: center;
-    line-height: 15px;
-    font-size: 0.8rem;
-}
-
 // Responsive breakpoint grid
 
 /* 

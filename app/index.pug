@@ -5,7 +5,9 @@ block head_end
     
 block content
     #homepage
+        include pug/layouts/_header
         include pug/pages/_booking
+        include pug/layouts/_footer
 
 block body_end
     include pug/block/_script
