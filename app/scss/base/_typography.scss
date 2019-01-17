@@ -3,3 +3,16 @@
 	font-family:fontawesome;
     src:url('../../lib/font-awesome/fonts/fontawesome-webfont.ttf');
 }
+
+@font-face{
+    font-family: open_sans;
+    src: url('../../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: open_sans_bold;
+    src: url(../../fonts/OpenSans-Bold.ttf);
+}
+

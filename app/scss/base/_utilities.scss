@@ -2,6 +2,13 @@
 	text-align: center!important;
 }
 
+.heading--light{
+    color: $color-grey-light-1;
+}
+.heading--dark{
+    color: $color-grey-dark-1;
+}
+
 //padding-bottom
 .pb-1{
     padding-bottom: 1rem!important;
