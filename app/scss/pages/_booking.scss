@@ -1,7 +1,6 @@
 //Benefits box
 .benefits{
     display: grid;
-    // grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 5rem;
     padding: 15rem 0;
@@ -22,4 +21,12 @@
         font-size: 1.7rem;
         font-weight: 400;
     }
+}
+//Intro box
+.intro{
+    background-image: linear-gradient(to left bottom, rgba($color-primary-light, 0.4), rgba($color-primary, 0.6)), url('../../images/back.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
 }

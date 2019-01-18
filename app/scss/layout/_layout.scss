@@ -12,11 +12,9 @@
     grid-column: col-start 7 / full-end;
 }
 .benefits{
-    background: $color-grey-dark-2;
     grid-column: main-start / main-end;
 }
 .intro{
-    background: $color-grey-light-2;
     grid-column: header-end / col-end 4;
 }
 .decision{
