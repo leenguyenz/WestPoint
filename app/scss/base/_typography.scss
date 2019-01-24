@@ -6,13 +6,19 @@
 
 @font-face{
     font-family: open_sans;
-    src: url('../../fonts/OpenSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('../../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
 }
 
 @font-face{
     font-family: open_sans_bold;
-    src: url(../../fonts/OpenSans-Bold.ttf);
+    src: url(../../fonts/opensans/OpenSans-Bold.ttf);
+}
+@font-face{
+    font-family: dancing;
+    src: url(../../fonts/dancing/DancingScript-Regular.ttf);
+}
+@font-face{
+    font-family: dancing_bold;
+    src: url(../../fonts/dancing/DancingScript-Bold.ttf);
 }
 
