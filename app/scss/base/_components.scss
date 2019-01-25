@@ -1,6 +1,6 @@
 //button action
 .btn-action{
-    padding: 12px 28px;
+    padding: 1.2rem 2.8rem;
     border: 0;
     text-transform: uppercase;
     background: $color-primary;
@@ -16,4 +16,14 @@
     &:hover{
         background: $color-primary-dark;
     }
+}
+
+//house label
+.house__label{
+    background: $color-secondary;
+    padding: 10px 18px;
+    color: $color-white;
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: bold;
 }

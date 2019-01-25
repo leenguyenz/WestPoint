@@ -22,6 +22,7 @@
         font-weight: 400;
     }
 }
+
 //Intro box
 .intro{
     background-image: linear-gradient(to left bottom, rgba($color-primary-light, 0.4), rgba($color-primary, 0.6)), url('../../images/back.jpg');
@@ -54,4 +55,60 @@
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+//Apartment section
+.apartment{
+    padding: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+    
+    &__box{
+        position: relative;
+
+        & > * {
+            text-align: center;
+        }
+    }
+
+    &__image{
+        position: relative;
+        i{
+            position: absolute;
+            font-size: 2rem;
+            right: 1rem;
+            top: 1rem;
+            color: $color-primary;
+        }
+        img{
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+
+    
+
+    .house__label{
+        position: absolute;
+        margin-top: -1.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2rem;
+        padding: 6rem 2rem 3rem;
+        background: $color-primary-light;
+        i{
+            color:$color-primary;
+            margin-right: 1rem;
+        }
+    }
+    .btn-action{
+        width: 100%;
+    }
 }
