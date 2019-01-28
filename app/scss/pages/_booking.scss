@@ -1,3 +1,39 @@
+//Banner box
+.banner{
+    background-image: linear-gradient(to left bottom, rgba($color-secondary, 0.8), rgba($color-secondary, 1)), url('../../images/hero.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    padding:5rem 10rem;
+
+    &__image{
+        max-width: 15%;
+    }
+
+    &__logo{
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        text-align: center;
+        align-self: start;
+    }
+
+    &__caption{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        align-self: center;
+    }
+
+    &__sme{
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        align-self: end;
+    }
+}
+
+//realtors box
+
 //Benefits box
 .benefits{
     display: grid;
