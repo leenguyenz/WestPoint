@@ -18,13 +18,11 @@
     grid-column: header-end / col-end 4;
 }
 .decision{
-    padding: 6rem 8vw;
     grid-column: col-start 5 / full-end;
 }
 .apartment{
     grid-column: main-start / main-end;
 }
 .gallery{
-    background: $color-primary-dark;
     grid-column: full-start / full-end;
 }
