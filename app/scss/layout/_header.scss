@@ -1,12 +1,26 @@
 header{
     background: $color-primary;
-    text-align: center;
     grid-column: header-start / header-end;
     grid-row: 1 / -1;
-    div{
-        width: 40px;
-        height: 2px;
-        background: $color-white;
-        margin: 10px auto;
+    padding-top: 3rem;
+
+    @include respond($tablet){
+        grid-column: 1 / -1;
+        grid-row: auto;
+        padding: 0;
+    }
+
+    .bars{
+        div{
+            width: 40px;
+            height: 2px;
+            background: $color-white;
+            margin: 10px auto;
+        }
+        @include respond($tablet){
+            display: inline-block;
+            align-items: end;
+            margin-left: 1rem;
+        }
     }
 }

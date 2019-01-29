@@ -1,11 +1,18 @@
 //Banner box
 .banner{
-    display: grid;
-    grid-row-gap: 1.5rem;
     padding:8rem;
-    grid-template-rows: 1fr min-content 6rem 1fr;
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+    justify-content: center;
+
+    @include respond($phone){
+        grid-column: 1 / -1;
+    }
+
     &__logo{
-        height: 2.5rem;
+        max-height: 2.5rem;
         justify-self: center;
     }
 
@@ -36,9 +43,11 @@
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 3rem;
         justify-items: center;
-        
+        align-items: center;
+
         img{
-            height: 2.5rem;
+            max-height: 2.5rem;
+            max-width: 100%;
             filter: brightness(70%);
         }
     }
@@ -46,19 +55,36 @@
 
 //realtors box
 .realtors{
-    padding: 8rem;
+    padding: 3rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    grid-row-gap: 3rem;
+
+    @include respond($phone){
+        grid-column: 1 / -1;
+    }
+
     img{
         width: 6rem;
-        height: 6rem;
         border-radius: 50%;
-        text-align: center;
     }
-    h4{
-        grid-column: 1 / span 2;
-        text-align: center;
+
+    &__list{
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+
+        @include respond($phone){
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @include respond($phone){
+            grid-template-columns: min-content max-content;
+        }
     }
 }
 
@@ -89,9 +115,14 @@
 
 //Intro box
 .intro{
-    display: GRID;
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
+
+    @include respond($phone){
+        grid-column: 1 / -1;
+    }
+
     img{
         width: 100%;
     }
@@ -116,6 +147,12 @@
     justify-content: center;
     align-items: center;
     padding: 6rem 8vw;
+
+    @include respond($phone){
+        grid-column: 1 / -1;
+        margin-top: 8rem;
+    }
+    
 }
 
 //Apartment section
