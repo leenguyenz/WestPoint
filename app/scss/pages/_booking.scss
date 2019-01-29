@@ -1,38 +1,66 @@
 //Banner box
 .banner{
-    background-image: linear-gradient(to left bottom, rgba($color-secondary, 0.8), rgba($color-secondary, 1)), url('../../images/hero.jpeg');
-    background-size: cover;
-    background-position: center center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-template-rows: repeat(3, 1fr);
-    padding:5rem 10rem;
-
-    &__image{
-        max-width: 15%;
+    grid-row-gap: 1.5rem;
+    padding:8rem;
+    grid-template-rows: 1fr min-content 6rem 1fr;
+    &__logo{
+        height: 2.5rem;
+        justify-self: center;
     }
 
-    &__logo{
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-        text-align: center;
+    .btn-action{
+        justify-self: start;
         align-self: start;
     }
 
-    &__caption{
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        align-self: center;
+    &__seenon{
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1rem;
+        align-items: center;
+
+        &:after, &:before{
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+        }
     }
 
     &__sme{
-        grid-column: 1 / -1;
-        grid-row: 3 / 4;
-        align-self: end;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+        justify-items: center;
+        
+        img{
+            height: 2.5rem;
+            filter: brightness(70%);
+        }
     }
 }
 
 //realtors box
+.realtors{
+    padding: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    img{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        text-align: center;
+    }
+    h4{
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+}
 
 //Benefits box
 .benefits{
@@ -61,10 +89,6 @@
 
 //Intro box
 .intro{
-    background-image: linear-gradient(to left bottom, rgba($color-primary-light, 0.4), rgba($color-primary, 0.6)), url('../../images/back.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     display: GRID;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
